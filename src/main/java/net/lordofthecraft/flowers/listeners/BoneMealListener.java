@@ -21,20 +21,17 @@ public class BoneMealListener implements Listener {
             Block block = event.getClickedBlock();
             ItemStack item = player.getInventory().getItemInMainHand();
 
-            if (isBoneMeal(item)){
-                if (isFlower(block)){
+            if (isBoneMeal(item) && isFlower(block) && player.hasPermission("flowers.use")) {
                     consumeItem(item);
                     FlowerCreation flowerCreation = new FlowerCreation();
                     flowerCreation.createFlower(block);
                 }
             }
 
-        }
     }
 
     private boolean isBoneMeal(ItemStack item){
-        ItemStack bonemeal = new ItemStack(Material.INK_SACK, 1,(short)15);
-        return (item.getType() == bonemeal.getType());
+        return (item.getType() == Material.INK_SACK && item.getDurability() == 15);
     }
 
     private boolean isFlower(Block block){
