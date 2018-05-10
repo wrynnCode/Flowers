@@ -1,9 +1,10 @@
-package net.lordofthecraft.gitlab.seventhcircle.flowers;
+package net.lordofthecraft.flowers;
 
-import net.lordofthecraft.gitlab.seventhcircle.flowers.listeners.BoneMealListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class FlowersAndBones extends JavaPlugin {
+import net.lordofthecraft.flowers.listeners.BoneMealListener;
+
+public final class Flowers extends JavaPlugin {
 
     @Override
     public void onEnable() {

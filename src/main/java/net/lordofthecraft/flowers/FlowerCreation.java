@@ -1,4 +1,4 @@
-package net.lordofthecraft.gitlab.seventhcircle.flowers;
+package net.lordofthecraft.flowers;
 
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;

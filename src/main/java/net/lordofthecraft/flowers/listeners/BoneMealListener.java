@@ -1,7 +1,6 @@
-package net.lordofthecraft.gitlab.seventhcircle.flowers.listeners;
+package net.lordofthecraft.flowers.listeners;
 
 
-import net.lordofthecraft.gitlab.seventhcircle.flowers.FlowerCreation;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -10,6 +9,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+
+import net.lordofthecraft.flowers.FlowerCreation;
 
 
 
