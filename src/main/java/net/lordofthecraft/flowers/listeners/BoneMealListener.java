@@ -1,6 +1,5 @@
 package net.lordofthecraft.flowers.listeners;
 
-
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -8,24 +7,22 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 
 import net.lordofthecraft.flowers.FlowerCreation;
 
-
-
 public class BoneMealListener implements Listener {
 
-    @EventHandler(ignoreCancelled = true)
+    @EventHandler
     public void PlayerInteractEvent(PlayerInteractEvent event){
-        if (event.getAction() == Action.RIGHT_CLICK_BLOCK){
+        if (event.getAction() == Action.RIGHT_CLICK_BLOCK && event.getHand() == EquipmentSlot.HAND) {
             Player player = event.getPlayer();
             Block block = event.getClickedBlock();
             ItemStack item = player.getInventory().getItemInMainHand();
 
             if (isBoneMeal(item)){
                 if (isFlower(block)){
-                    event.setCancelled(true);
                     consumeItem(item);
                     FlowerCreation flowerCreation = new FlowerCreation();
                     flowerCreation.createFlower(block);
