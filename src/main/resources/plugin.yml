@@ -1,10 +1,10 @@
 name: FlowersAndBones
 version: ${project.version}
-main: net.lordofthecraft.gitlab.seventhcircle.flowersandbones.Core
+main: net.lordofthecraft.gitlab.seventhcircle.flowers.FlowersAndBones
 authors: [SeventhCircle]
 description: A plugin for generating bones and flowers more easily
 website: Https://gitlab.lordofthecraft.net/lotc-dev/coders/FlowersAndBones
 
 permissions:
-    FlowersAndBones.use:
+    flowers.use:
         description: Allows a user to duplicate their flowers

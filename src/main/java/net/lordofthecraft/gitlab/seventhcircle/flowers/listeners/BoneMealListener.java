@@ -1,7 +1,7 @@
-package net.lordofthecraft.gitlab.seventhcircle.flowersandbones.Events;
+package net.lordofthecraft.gitlab.seventhcircle.flowers.listeners;
 
 
-import net.lordofthecraft.gitlab.seventhcircle.flowersandbones.FlowerCreation;
+import net.lordofthecraft.gitlab.seventhcircle.flowers.FlowerCreation;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 
 
-public class onBoneMeal implements Listener {
+public class BoneMealListener implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     public void PlayerInteractEvent(PlayerInteractEvent event){
