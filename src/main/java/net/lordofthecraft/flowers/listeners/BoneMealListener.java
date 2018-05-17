@@ -1,5 +1,7 @@
 package net.lordofthecraft.flowers.listeners;
 
+import net.lordofthecraft.flowers.FlowerCreation;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -9,8 +11,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
-
-import net.lordofthecraft.flowers.FlowerCreation;
 
 public class BoneMealListener implements Listener {
 
@@ -22,6 +22,7 @@ public class BoneMealListener implements Listener {
             ItemStack item = player.getInventory().getItemInMainHand();
 
             if (isBoneMeal(item) && isFlower(block) && player.hasPermission("flowers.use")) {
+                if (player.getGameMode() == GameMode.CREATIVE) return;
                     consumeItem(item);
                     FlowerCreation flowerCreation = new FlowerCreation();
                     flowerCreation.createFlower(block);
