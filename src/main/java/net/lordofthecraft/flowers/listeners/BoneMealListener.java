@@ -32,14 +32,15 @@ public class BoneMealListener implements Listener {
     }
 
     private boolean isBoneMeal(ItemStack item){
-        return (item.getType() == Material.INK_SACK && item.getDurability() == 15);
+        return (item.getType() == Material.BONE_MEAL);
     }
 
     private boolean isFlower(Block block){
         Material blocktype = block.getType();
 
         switch (blocktype){
-            case RED_ROSE: case YELLOW_FLOWER: //Only on small flowers as big flowers have this mechanic in vanilla
+            case ROSE_RED: case DANDELION: case POPPY: case BLUE_ORCHID: case ALLIUM: case AZURE_BLUET: case ORANGE_TULIP:
+            case PINK_TULIP: case RED_TULIP: case WHITE_TULIP: case OXEYE_DAISY:
                 return true;
             default:
                 break;
