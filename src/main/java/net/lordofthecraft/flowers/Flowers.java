@@ -1,5 +1,6 @@
 package net.lordofthecraft.flowers;
 
+import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -31,6 +32,7 @@ public final class Flowers extends JavaPlugin implements Listener {
                 if (player.getGameMode() == GameMode.CREATIVE) return;
                 consumeItem(item);
                 createFlower(block);
+                block.getWorld().playEffect(block.getLocation(), Effect.VILLAGER_PLANT_GROW, 6);
             }
         }
 
