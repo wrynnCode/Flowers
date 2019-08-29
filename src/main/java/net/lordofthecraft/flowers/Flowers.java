@@ -46,8 +46,8 @@ public final class Flowers extends JavaPlugin implements Listener {
         Material blocktype = block.getType();
 
         switch (blocktype){
-            case ROSE_RED: case DANDELION: case POPPY: case BLUE_ORCHID: case ALLIUM: case AZURE_BLUET: case ORANGE_TULIP:
-            case PINK_TULIP: case RED_TULIP: case WHITE_TULIP: case OXEYE_DAISY:
+            case ROSE_BUSH: case DANDELION: case POPPY: case BLUE_ORCHID: case ALLIUM: case AZURE_BLUET: case ORANGE_TULIP:
+            case PINK_TULIP: case RED_TULIP: case WHITE_TULIP: case OXEYE_DAISY: case CORNFLOWER : case LILY_OF_THE_VALLEY :
                 return true;
             default:
                 break;
@@ -61,7 +61,7 @@ public final class Flowers extends JavaPlugin implements Listener {
 
     public void createFlower(Block block){
 
-        ItemStack flower = new ItemStack(block.getState().getData().toItemStack(1));
+        ItemStack flower = new ItemStack(block.getBlockData().getMaterial());
         block.getWorld().dropItemNaturally(block.getLocation(), flower);
 
     }
