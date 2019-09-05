@@ -4,7 +4,7 @@ main: net.lordofthecraft.flowers.Flowers
 author: SeventhCircle
 description: A plugin for generating bones and flowers more easily
 website: Https://gitlab.lordofthecraft.net/lotc-dev/coders/FlowersAndBones
-api-version: 1.13
+api-version: 1.14
 
 permissions:
     flowers.use:
