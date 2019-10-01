@@ -59,7 +59,7 @@ public final class Flowers extends JavaPlugin implements Listener {
         item.setAmount(item.getAmount() - 1);
     }
 
-    public void createFlower(Block block){
+    private void createFlower(Block block){
 
         ItemStack flower = new ItemStack(block.getBlockData().getMaterial());
         block.getWorld().dropItemNaturally(block.getLocation(), flower);
